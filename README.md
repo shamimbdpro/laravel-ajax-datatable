@@ -8,6 +8,7 @@
 
 - Clone Respository.
 - configure database in .enve file.
+- run ( composer update )
 - run php artisan migrate:fresh --seed
 
 
