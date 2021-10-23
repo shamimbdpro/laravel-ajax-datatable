@@ -13,13 +13,26 @@ class CustomerController extends Controller
             $customers = Customer::all();
             return datatables()->of($customers)
                 ->addColumn('action', function ($row) {
-                    $html = '<a href="#" class="btn btn-secondary btn-edit">Edit</a> ';
+                    $html = '<a href="'.route('customers.edit', $row->id).'" class="btn btn-secondary btn-edit">Edit</a> ';
                     $html .= '<button data-rowid="' . $row->id . '" class="btn btn-danger btn-delete">Del</button>';
                     return $html;
                 })->toJson();
         }
 
         return view('customers');
+    }
+
+
+    public function edit($id){
+
+         $edit = Customer::find($id);
+
+            echo "<pre>";
+
+            print_r($edit);
+
+            exit();
+
     }
 
     public function store(Request $request)
