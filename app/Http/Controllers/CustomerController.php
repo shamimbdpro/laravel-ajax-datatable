@@ -13,8 +13,8 @@ class CustomerController extends Controller
             $customers = Customer::all();
             return datatables()->of($customers)
                 ->addColumn('action', function ($row) {
-                    $html = '<a href="#" class="btn btn-xs btn-secondary btn-edit">Edit</a> ';
-                    $html .= '<button data-rowid="' . $row->id . '" class="btn btn-xs btn-danger btn-delete">Del</button>';
+                    $html = '<a href="#" class="btn btn-secondary btn-edit">Edit</a> ';
+                    $html .= '<button data-rowid="' . $row->id . '" class="btn btn-danger btn-delete">Del</button>';
                     return $html;
                 })->toJson();
         }
