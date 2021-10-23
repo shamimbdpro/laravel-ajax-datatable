@@ -6,7 +6,7 @@
 ## About Installation
 
 
-- Clone Respository.
+- Clone Respository ( https://github.com/shamimbdpro/laravel-ajax-datatable.git ) .
 - configure database in .enve file.
 - run ( composer update )
 - run php artisan migrate:fresh --seed
