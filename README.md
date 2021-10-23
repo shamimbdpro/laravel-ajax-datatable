@@ -1,5 +1,5 @@
 <p align="center">
-	<a href="https://codepopular.com" target="_blank"><img src="preview.gif"></a>
+	<a href="https://codepopular.com" target="_blank"><img src="preview.gif" width="100%"></a>
 </p>
 
 
