@@ -10,5 +10,6 @@
 - configure database in .enve file.
 - run ( composer update )
 - run php artisan migrate:fresh --seed
+- Access data http://127.0.0.1:8000/customers
 
 
