@@ -10,7 +10,7 @@ class CustomerController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $customers = Customer::all();
+            $customers = Customer::select('id', 'name', 'phone', 'email');
             return datatables()->of($customers)
                 ->addColumn('action', function ($row) {
                     $html = '<a href="'.route('customers.edit', $row->id).'" class="btn btn-secondary btn-edit">Edit</a> ';
